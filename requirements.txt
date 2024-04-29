@@ -1,0 +1,5 @@
+Library to install:
+requests
+
+Other notes:
+Set PYTHONPATH to the main project directory
