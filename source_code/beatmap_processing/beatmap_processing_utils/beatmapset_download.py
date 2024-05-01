@@ -19,7 +19,7 @@ if __name__ == '__main__':
     print('Function finished running.')
 
     # save file
-    f = open(os.path.join(ROOT_SRC_DIR, os.pardir, 'data', 'interim', '1853618.zip'), 'wb')
+    f = open(os.path.join(ROOT_SRC_DIR, os.pardir, 'data', 'interim', '2111018.zip'), 'wb')
     f.write(f_content)
     f.close()
     print('Download of beatmapset ID 2111018 successful.')
