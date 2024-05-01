@@ -3,8 +3,8 @@ from source_code.utils.RootDirSingeton import ROOT_SRC_DIR
 
 
 def download_beatmapset(beatmapset_id):
-    # wait 0.5 second to avoid overload
-    time.sleep(0.5)
+    # wait 1 second to avoid overload
+    time.sleep(1)
 
     # request beatmapset from website
     req = requests.get(f'https://beatconnect.io/b/{beatmapset_id}')
