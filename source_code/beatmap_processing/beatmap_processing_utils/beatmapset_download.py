@@ -15,11 +15,11 @@ def download_beatmapset(beatmapset_id):
 
 if __name__ == '__main__':
     # call function
-    f_content = download_beatmapset(1853618)
+    f_content = download_beatmapset(2111018)
     print('Function finished running.')
 
     # save file
     f = open(os.path.join(ROOT_SRC_DIR, os.pardir, 'data', 'interim', '1853618.zip'), 'wb')
     f.write(f_content)
     f.close()
-    print('Download of beatmapset ID 1853618 successful.')
+    print('Download of beatmapset ID 2111018 successful.')

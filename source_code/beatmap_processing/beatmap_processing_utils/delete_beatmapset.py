@@ -9,5 +9,5 @@ def delete_beatmapset(beatmapset_id):
 # testing
 if __name__ == '__main__':
     # run beatmapset_download.py before this
-    delete_beatmapset(1853618)
-    print('Deletion of beatmapset ID 1853618 successful.')
+    delete_beatmapset(2111018)
+    print('Deletion of beatmapset ID 2111018 successful.')
