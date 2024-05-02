@@ -7,21 +7,31 @@ Beat length: miliseconds per beat
 Length: pixel length of slider
 '''
 
-def process_timing_point(slider_mult, timing_point_list):
+'''
+The function takes in a list of timing points, as processed by extract_info_beatmap.py
+It returns a list of timing points. Each timing point is a list with 2 elements: starting time and beat length
+'''
+
+def process_timing_point(timing_point_list):
+    # initialisation
     timing_point_processed = []
     current_beat_length = None
 
+    # iterate through the timing points
     for timing_point in timing_point_list:
+        # extract time and beat length
         time, beat_length, _, _, _, _, _, _ = timing_point.split(',')
         
+        # convert to number type
         time = int(time)
         beat_length = float(beat_length)
 
-        if beat_length < 0:
+        if beat_length < 0:     # if timing point is inherited
             beat_length = current_beat_length * 100 / (-beat_length)
-        else:
+        else:                   # if timing point is uninherited
             current_beat_length = beat_length
 
+        # add to overall list
         timing_point_processed.append([time, beat_length])
 
     return timing_point_processed

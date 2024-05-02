@@ -1,6 +1,10 @@
 import requests, os, time
 from source_code.utils.RootDirSingeton import ROOT_SRC_DIR
 
+'''
+This function takes in a beatmapset ID.
+It downloads and returns the content of the beatmapset file (which is a .osz file, can be renamed as .zip file)
+'''
 
 def download_beatmapset(beatmapset_id):
     # wait 1 second to avoid overload
