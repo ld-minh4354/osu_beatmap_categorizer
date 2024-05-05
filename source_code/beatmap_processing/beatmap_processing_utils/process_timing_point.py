@@ -39,8 +39,6 @@ def process_timing_point(timing_point_list):
 
 # testing
 if __name__ == '__main__':
-    slider_mult = 1.4
-
     f = open(os.path.join(ROOT_SRC_DIR, os.pardir, 'data', 'interim', 'timingpoints.txt'), 'r')
     timing_point_list = f.read()
     f.close()
@@ -48,4 +46,4 @@ if __name__ == '__main__':
 
     print(timing_point_list)
 
-    print(process_timing_point(slider_mult=slider_mult, timing_point_list=timing_point_list))
+    print(process_timing_point(timing_point_list=timing_point_list))
