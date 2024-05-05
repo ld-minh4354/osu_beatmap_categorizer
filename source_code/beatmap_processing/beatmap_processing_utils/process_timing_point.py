@@ -33,6 +33,9 @@ def process_timing_point(timing_point_list):
 
         # add to overall list
         timing_point_processed.append([time, beat_length])
+    
+    # add infinity timepoint
+    timing_point_processed.append([1e10, 0])
 
     return timing_point_processed
 
