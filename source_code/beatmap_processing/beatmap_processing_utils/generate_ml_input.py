@@ -12,13 +12,14 @@ def generate_ml_input(slider_mult, timing_point_list, hit_object_list):
     for hit_object in hit_object_list:
         object_info = hit_object.split(',')
         
-        time = object_info[2]
-        type = object_info[3]
+        time = int(object_info[2])
+        type = int(object_info[3])
 
         while timing_point_processed[1][0] < time:
             timing_point_processed.pop(0)
 
-        time_mult = timing_point_processed[0][1] / slider_mult
+        # ms per pixel = ms per beat / pixel per beat
+        time_mult = timing_point_processed[0][1] / (slider_mult * 100)
 
         if is_object_type(type=type, target='circle'):
             ml_input.append(process_circle(hit_object))

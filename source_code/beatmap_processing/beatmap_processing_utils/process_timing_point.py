@@ -2,12 +2,6 @@ import os
 from source_code.utils.RootDirSingeton import ROOT_SRC_DIR
 
 '''
-Slider multiplier * 100: pixels per beat
-Beat length: miliseconds per beat
-Length: pixel length of slider
-'''
-
-'''
 The function takes in a list of timing points, as processed by extract_info_beatmap.py
 It returns a list of timing points. Each timing point is a list with 2 elements: starting time and beat length
 '''
@@ -23,11 +17,12 @@ def process_timing_point(timing_point_list):
         time, beat_length, _, _, _, _, _, _ = timing_point.split(',')
         
         # convert to number type
+        # beat_length = ms per beat
         time = int(time)
         beat_length = float(beat_length)
 
         if beat_length < 0:     # if timing point is inherited
-            beat_length = current_beat_length * 100 / (-beat_length)
+            beat_length = current_beat_length * (-beat_length) / 100
         else:                   # if timing point is uninherited
             current_beat_length = beat_length
 
