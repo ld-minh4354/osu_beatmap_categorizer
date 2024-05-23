@@ -1,5 +1,5 @@
 import os
-from utils.RootDirSingeton import ROOT_SRC_DIR
+from utils.RootDirSingeton import ROOT_DIR
 
 '''
 The function takes in a list of timing points, as processed by extract_info_beatmap.py
@@ -37,7 +37,7 @@ def process_timing_point(timing_point_list):
 
 # testing
 if __name__ == '__main__':
-    f = open(os.path.join(ROOT_SRC_DIR, os.pardir, 'data', 'interim', 'timingpoints.txt'), 'r')
+    f = open(os.path.join(ROOT_DIR, 'data', 'interim', 'timingpoints.txt'), 'r')
     timing_point_list = f.read()
     f.close()
     timing_point_list = timing_point_list.split('\n')

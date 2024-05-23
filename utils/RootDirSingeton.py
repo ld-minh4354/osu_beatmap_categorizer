@@ -20,6 +20,6 @@ class RootDirSingleton:
     def get_root_dir(self):
         return self.instance.path
 
-ROOT_SRC_DIR = RootDirSingleton().get_root_dir()
+ROOT_DIR = RootDirSingleton().get_root_dir()
 
-print(ROOT_SRC_DIR)
+print(ROOT_DIR)

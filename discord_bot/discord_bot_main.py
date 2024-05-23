@@ -1,6 +1,6 @@
 import discord
 import os
-from utils.RootDirSingeton import ROOT_SRC_DIR
+from utils.RootDirSingeton import ROOT_DIR
 
 # some inits
 intents = discord.Intents.default()
@@ -25,7 +25,7 @@ async def on_message(message):
 # main program
 if __name__ == '__main__':
     # get token
-    f = open(os.path.join(ROOT_SRC_DIR, os.pardir, 'data', 'raw', 'token.txt'), 'r')
+    f = open(os.path.join(ROOT_DIR, 'data', 'raw', 'token.txt'), 'r')
     token = f.read()
     f.close()
 

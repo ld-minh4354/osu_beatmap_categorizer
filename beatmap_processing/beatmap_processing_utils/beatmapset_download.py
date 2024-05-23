@@ -1,5 +1,5 @@
 import requests, os, time
-from utils.RootDirSingeton import ROOT_SRC_DIR
+from utils.RootDirSingeton import ROOT_DIR
 
 '''
 This function takes in a beatmapset ID.
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     print('Function finished running.')
 
     # save file
-    f = open(os.path.join(ROOT_SRC_DIR, os.pardir, 'data', 'interim', '1558182.zip'), 'wb')
+    f = open(os.path.join(ROOT_DIR, 'data', 'interim', '1558182.zip'), 'wb')
     f.write(f_content)
     f.close()
     print('Download of beatmapset ID 1558182 successful.')
