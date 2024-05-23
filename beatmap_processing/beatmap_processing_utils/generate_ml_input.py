@@ -1,9 +1,9 @@
 import os
-from source_code.utils.RootDirSingeton import ROOT_SRC_DIR
-from source_code.beatmap_processing.beatmap_processing_utils.process_timing_point import process_timing_point
-from source_code.beatmap_processing.beatmap_processing_utils.is_object_type import is_object_type
-from source_code.beatmap_processing.beatmap_processing_utils.process_circle import process_circle
-from source_code.beatmap_processing.beatmap_processing_utils.process_slider import process_slider
+from utils.RootDirSingeton import ROOT_SRC_DIR
+from beatmap_processing.beatmap_processing_utils.process_timing_point import process_timing_point
+from beatmap_processing.beatmap_processing_utils.is_object_type import is_object_type
+from beatmap_processing.beatmap_processing_utils.process_circle import process_circle
+from beatmap_processing.beatmap_processing_utils.process_slider import process_slider
 
 def generate_ml_input(slider_mult, timing_point_list, hit_object_list):
     ml_input = []

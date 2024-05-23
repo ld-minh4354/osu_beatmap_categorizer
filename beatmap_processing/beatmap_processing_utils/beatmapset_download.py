@@ -1,5 +1,5 @@
 import requests, os, time
-from source_code.utils.RootDirSingeton import ROOT_SRC_DIR
+from utils.RootDirSingeton import ROOT_SRC_DIR
 
 '''
 This function takes in a beatmapset ID.

@@ -1,5 +1,5 @@
 import os
-from source_code.utils.RootDirSingeton import ROOT_SRC_DIR
+from utils.RootDirSingeton import ROOT_SRC_DIR
 
 '''
 The function takes in a list of timing points, as processed by extract_info_beatmap.py

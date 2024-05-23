@@ -1,5 +1,5 @@
 import os
-from source_code.utils.RootDirSingeton import ROOT_SRC_DIR
+from utils.RootDirSingeton import ROOT_SRC_DIR
 
 '''
 This function takes a beatmapset ID and delete the beatmapset to save space

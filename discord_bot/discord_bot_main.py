@@ -1,6 +1,6 @@
 import discord
 import os
-from source_code.utils.RootDirSingeton import ROOT_SRC_DIR
+from utils.RootDirSingeton import ROOT_SRC_DIR
 
 # some inits
 intents = discord.Intents.default()
